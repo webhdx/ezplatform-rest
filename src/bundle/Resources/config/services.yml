@@ -243,7 +243,7 @@ services:
         class: EzSystems\EzPlatformRest\Server\Controller\SessionController
         parent: ezpublish_rest.controller.base
         arguments:
-            - "@ezpublish_rest.session_authenticator"
+            - "@?ezpublish_rest.session_authenticator"
             - "%ezpublish_rest.csrf_token_intention%"
             - '@eZ\Publish\API\Repository\PermissionResolver'
             - '@ezpublish.api.service.user'
